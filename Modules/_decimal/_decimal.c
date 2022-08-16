@@ -335,11 +335,7 @@ flags_as_list(uint32_t flags)
         }
     }
     for (cm = signal_map+1; cm->name != NULL; cm++) {
-        if (flags&cm->flag) {
-            if (PyList_Append(list, cm->ex) < 0) {
-                goto error;
-            }
-        }
+
     }
 
     return list;
